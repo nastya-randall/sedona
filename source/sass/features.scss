@@ -7,14 +7,15 @@
 .features__title {
   display: block;
   margin: 0 32px;
-  margin-bottom: 28px;
+  margin-bottom: 26px;
   color: #333333;
   font-size: 18px;
   font-weight: 700;
 }
 
 .features__text {
-  margin: 0 30px;
+  margin: 0 32px;
+  margin-bottom: 5px;
   font-size: 14px;
   font-weight: 400;
   line-height: 26px;
@@ -27,12 +28,40 @@
 }
 
 .features__item {
+
   &--detailed {
     color: #ffffff;
     background-color: #81b3d2;
   }
+  
+  &:first-child {
+    padding-top: 77px;
+    background-image: url("../img/bg-triangle-down.svg");
+    background-repeat: no-repeat;
+    background-position: center top;
+  }
 }
 
 .features__item-title {
-  
+  margin: 0;
+  margin-bottom: 5px;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.features__item-number {
+  display: block;
+  margin-bottom: 14px;
+  font-size: 14px;
+}
+
+.features__item-text {
+  margin: 0;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.features__item-image {
+  margin-top: 40px;
+  display: block;
 }

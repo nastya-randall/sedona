@@ -2,11 +2,8 @@
   height: 390px;
   display: flex;
   justify-content: center;
-  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-image: url("../img/bg-intro-triangle-tablet.svg"), url("../img/bg-back-mobile@1x.jpg");
   background-size: auto;
   background-position: center bottom;
   background-repeat: no-repeat;
-}
-
-.banner__image {
 }
