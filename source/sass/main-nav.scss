@@ -108,3 +108,38 @@
     box-shadow: 0 8px 0 0 #81b3d2, 0 16px 0 0 #81b3d2;
   }
 }
+
+@media (min-width: $tablet-width) {
+  .main-nav__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .main-nav__item:nth-child(2) {
+    margin-right: 20%;
+  }
+
+  .main-nav__item a {
+    padding-top: 6px;
+    padding-bottom: 9px;
+    color: #000000;
+    width: 153px;
+    font-size: 14px;
+    background-color: #ffffff;
+    box-shadow: none;
+  }
+
+  .main-nav__close,
+  .main-nav__wrapper,
+  .main-nav__item:last-child a::after {
+    display: none;
+  }
+  
+  .main-nav__logo {
+    left: 50%;
+    margin: 0;
+    transform: translate(-50%);
+  }
+
+}

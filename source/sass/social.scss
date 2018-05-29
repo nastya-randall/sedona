@@ -1,0 +1,35 @@
+.social {
+  width: 150px;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.social__link {
+  display: block;
+  width: 46px;
+  height: 48px;
+  box-sizing: border-box;
+  text-align: center;
+  vertical-align: center;
+  line-height: 48px;
+  background-color: #81b3d2;
+
+  &:hover {
+    background-color: #669ec0;
+  }
+
+  &:active {
+    background-color: #5496bd;
+  }
+}
+
+.social__icon {
+  fill: #ffffff;
+}
+
+.social__link:active .social__icon {
+  fill: rgba(255, 255, 255, 0.3);
+}

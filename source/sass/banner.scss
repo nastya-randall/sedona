@@ -1,9 +1,20 @@
 .banner {
-  height: 390px;
+  min-height: 390px;
   display: flex;
   justify-content: center;
-  background-image: url("../img/bg-intro-triangle-tablet.svg"), url("../img/bg-back-mobile@1x.jpg");
+  background-image: url("../img/intro-triangle.png"), url("../img/bg-back-mobile@1x.jpg");
   background-size: auto;
   background-position: center bottom;
   background-repeat: no-repeat;
+}
+
+.banner__image {
+  width: 282px;
+  height: 214px;
+}
+
+@media (min-width: $tablet-width) {
+  .banner {
+    min-height: 518px;
+  }
 }
