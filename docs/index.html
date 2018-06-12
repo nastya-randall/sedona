@@ -53,10 +53,18 @@
         <p class="features__text">These 5 things make  Sedona cooler than the Grand Canyon</p>
         <ul class="features__list">
           <li class="features__item features__item--detailed">
-            <h3 class="features__item-title">Real Town</h3>
-            <span class="features__item-number">— №1 —</span>
-            <p class="features__item-text">Sedona is not just a tourist attraction, its own life flows here</p>
-            <img class="features__item-image" src="img/main-city-mobile@1x.jpg" alt="Town of Sedona" width="320" height="260">
+            <div class="features__item-container">
+              <h3 class="features__item-title">Real Town</h3>
+              <span class="features__item-number">— №1 —</span>
+              <p class="features__item-text">Sedona is not just a tourist attraction, its own life flows here</p>
+            </div>
+            <div class="features__image-container">
+              <picture>
+              <source media="(min-width: 768px)" srcset="img/main-city-tablet@1x.jpg">
+              <img class="features__item-image" src="img/main-city-mobile@1x.jpg" alt="Town of Sedona" width="320" height="260">
+              </picture>
+            </div>
+
             <ul class="features__services services">
               <li class="services__item services__item--house">
                 <h4 class="services__title">Accommodation</h4>
@@ -73,14 +81,21 @@
             </ul>
           </li>
           <li class="features__item features__item--detailed">
-            <h3 class="features__item-title">Devil's Bridge</h3>
-            <span class="features__item-number">— №2 —</span>
-            <p class="features__item-text">Yes, you can cross it! Only if you dare, of course!</p>
-            <img class="features__item-image" src="img/main-bridge-mobile@1x.jpg" alt="Devil's Bridge" width="320" height="260">
+            <div class="features__item-container">
+              <h3 class="features__item-title">Devil's Bridge</h3>
+              <span class="features__item-number">— №2 —</span>
+              <p class="features__item-text">Yes, you can cross it! Only if you dare, of course!</p>
+            </div>
+            <div class="features__image-container features__image-container--bridge">
+              <picture>
+              <source media="(min-width: 768px)" srcset="img/main-bridge-tablet@1x.jpg">
+              <img class="features__item-image" src="img/main-bridge-mobile@1x.jpg" alt="Devil's Bridge">
+              </picture>
+            </div>
           </li>
           <li class="features__item features__item--simple">
             <div class="features__item-wrapper">
-              <h3 class="features__item-title">Small Area</h3>
+              <h3 class="features__item-title">Small Territory</h3>
               <span class="features__item-number">— №3 —</span>
               <p class="features__item-text">All sights are located close to each other!</p>
             </div>
@@ -111,7 +126,10 @@
 
       <sectiom class="page-main__map map">
         <h2 class="visually-hidden">Find Us on the Map</h2>
-        <img class="map__image" src="img/bg-map-mobile@1x.jpg">
+        <picture>
+          <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.jpg">
+          <img class="features__item-image" src="img/bg-map-mobile@1x.jpg" alt="The City of Arizona">
+        </picture>
       </sectiom>
     </main>
 

@@ -1,7 +1,7 @@
 .services {
   margin: 0;
   padding-top: 26px;
-  padding-bottom: 17px;
+  padding-bottom: 15px;
   padding-left: 21px;
   padding-right: 25px;
   text-align: left;
@@ -36,13 +36,12 @@
     background-size: 40px 35px;
     background-position: -3px 4px;
   }
-    
+
   &--gift::before {
     background-image: url("../img/icon-gift.svg");
     background-size: 32px 38px;
     background-position: center top;
   }
-
 }
 
 .services__title {
@@ -60,4 +59,53 @@
   color: #333333;
   font-size: 14px;
   line-height: 21px;
+}
+
+@media (min-width: $tablet-width) {
+  .services {
+    display: flex;
+    flex-basis: 100%;
+    justify-content: space-between;
+    padding-top: 60px;
+    padding-bottom: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .services__item {
+    width: 165px;
+    padding-left: 0;
+    padding-top: 100px;
+    text-align: center;
+    box-sizing: border-box;
+
+    &--gift {
+      order: 2;
+    }
+
+    &::before {
+      width: 77px;
+      height: 75px;
+      left: 40px;
+    }
+
+    &--house::before {
+      background-size: 75px 72px;
+    }
+
+    &--burger::before {
+      background-size: 77px 68px;
+      background-position: left center;
+    }
+
+    &--gift::before {
+      background-size: 64px 75px;
+      background-position: right top;
+    }
+  }
+
+  .services__title {
+    font-size: 21px;
+    margin-bottom: 20px;
+  }
 }
