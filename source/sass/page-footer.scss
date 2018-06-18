@@ -11,3 +11,13 @@
   line-height: 26px;
   text-align: center;
 }
+
+@media (min-width: $tablet-width) {
+  .page-footer {
+    display: flex;
+    align-items: baseline;
+    padding-top: 35px;
+    padding-left: 80px;
+
+  }
+}

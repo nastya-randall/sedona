@@ -66,6 +66,10 @@
   line-height: 26px;
 }
 
+.features__item-title br {
+  display: none;
+}
+
 .features__item-number {
   display: block;
   margin-bottom: 12px;
@@ -146,6 +150,10 @@
   .features__item-title {
     margin-bottom: 7px;
     font-size: 21px;
+  }
+
+  .features__item-title br {
+    display: inline;
   }
 
   .features__image-container {

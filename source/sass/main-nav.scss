@@ -125,9 +125,11 @@
     padding-bottom: 9px;
     color: #000000;
     width: 153px;
+    min-height: 56px;
     font-size: 14px;
     background-color: #ffffff;
     box-shadow: none;
+    outline: 1px solid red;
   }
 
   .main-nav__close,
@@ -135,11 +137,25 @@
   .main-nav__item:last-child a::after {
     display: none;
   }
-  
+
   .main-nav__logo {
     left: 50%;
     margin: 0;
     transform: translate(-50%);
   }
+}
 
+@media (min-width: $desktop-width) {
+  .main-nav__item a {
+    width: 239px;
+  }
+
+  .main-nav__logo {
+    top: 0;
+  }
+
+  .main-nav__logo img {
+    width: 189px;
+    height: 96px;
+  }
 }

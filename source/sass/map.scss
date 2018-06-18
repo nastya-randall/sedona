@@ -1,0 +1,39 @@
+.map {
+  position: relative;
+  outline: 1px solid red;
+
+  ::before {
+    content: "";
+    position: absolute;
+    top: 160px;
+    left: 146px;
+    width: 27px;
+    height: 27px;
+    box-sizing: border-box;
+    background-color: #81b4d4;
+    border: 5px solid #ffffff;
+    border-radius: 50%;
+    z-index: 1;
+
+  }
+}
+
+.map__image {
+  display: block;
+  width: 320px;
+  height: 350px;
+}
+
+@media (min-width: $tablet-width) {
+  .map {
+    ::before {
+      top: 164px;
+      left: 370px;
+    }
+  }
+
+  .map__image {
+    width: 768px;
+    height: 350px;
+  }
+}

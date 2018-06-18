@@ -11,7 +11,8 @@
       <include src="docs/img/sprite.svg"></include>
     </div>
 
-    <header class="page-header container">
+    <div class="container">
+    <header class="page-header">
       <nav class="page-header__nav main-nav">
         <ul class="main-nav__list">
           <li class="main-nav__item">
@@ -30,8 +31,9 @@
         </ul>
         <a class="main-nav__logo" aria-label="Logo">
           <picture>
+            <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
             <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
-            <img src="img/logo-sedona-mobile.svg" width="102" height="83">
+            <img src="img/logo-sedona-mobile.svg">
           </picture>
         </a>
         <div class="main-nav__wrapper">
@@ -40,7 +42,7 @@
       </nav>
     </header>
 
-    <main class="page-main container">
+    <main class="page-main">
       <h1 class="visually-hidden">Sedona - a city in Arizona</h1>
 
       <section class="page-main__banner banner">
@@ -109,7 +111,7 @@
           </li>
           <li class="features__item features__item--simple">
             <div class="features__item-wrapper">
-              <h3 class="features__item-title">Few Tourists</h3>
+              <h3 class="features__item-title">Few <br>Tourists</h3>
               <span class="features__item-number">— №5 —</span>
               <p class="features__item-text">Most of them crowd at the Grand Canyon</p>
             </div>
@@ -128,12 +130,12 @@
         <h2 class="visually-hidden">Find Us on the Map</h2>
         <picture>
           <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.jpg">
-          <img class="features__item-image" src="img/bg-map-mobile@1x.jpg" alt="The City of Arizona">
+          <img class="map__image" src="img/bg-map-mobile@1x.jpg" alt="The City of Arizona">
         </picture>
       </sectiom>
     </main>
 
-    <footer class="page-footer container">
+    <footer class="page-footer">
       <span class="page-footer__hashtag">#visitsedona</span>
       <ul class="page-footer__social social">
         <li class="social__item">
@@ -159,5 +161,6 @@
         </li>
       </ul>
     </footer>
+    </div>
   </body>
 </html>
