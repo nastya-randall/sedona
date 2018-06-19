@@ -22,12 +22,17 @@
   line-height: 24px;
 }
 
+.booking__button {
+  width: 280px;
+  margin: 0 auto;
+}
+
 @media (min-width: $tablet-width) {
   .booking {
     padding-top: 55px;
     padding-bottom: 58px;
-    padding-left: 155px;
-    padding-right: 155px;
+    padding-left: 20.18%;
+    padding-right: 20.18%;
   }
 
   .booking__title {
@@ -37,6 +42,10 @@
 
   .booking__text {
     margin-bottom: 42px;
+  }
+  
+  .booking__button {
+    width: 458px;
   }
 }
 
