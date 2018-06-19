@@ -62,8 +62,12 @@
             </div>
             <div class="features__image-container">
               <picture>
-              <source media="(min-width: 768px)" srcset="img/main-city-tablet@1x.jpg">
-              <img class="features__item-image" src="img/main-city-mobile@1x.jpg" alt="Town of Sedona" width="320" height="260">
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/main-city-desktop@1x.webp 1x, img/main-city-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/main-city-tablet@1x.webp 1x, img/main-city-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/main-city-mobile@1x.webp 1x, img/main-city-mobile@2x.webp 2x">
+                <source media="(min-width: 1200px)" srcset="img/main-city-desktop@1x.jpg 1x, img/main-city-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/main-city-tablet@1x.jpg 1x, img/main-city-tablet@2x.jpg 2x">
+                <img class="features__item-image" srcset="img/main-city-mobile@2x.jpg 2x" src="img/main-city-mobile@1x.jpg" alt="Town of Sedona">
               </picture>
             </div>
 
@@ -90,21 +94,25 @@
             </div>
             <div class="features__image-container features__image-container--bridge">
               <picture>
-              <source media="(min-width: 768px)" srcset="img/main-bridge-tablet@1x.jpg">
-              <img class="features__item-image" src="img/main-bridge-mobile@1x.jpg" alt="Devil's Bridge">
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/main-bridge-desktop@1x.webp 1x, img/main-bridge-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/main-bridge-tablet@1x.webp 1x, img/main-bridge-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/main-bridge-mobile@1x.webp 1x, img/main-bridge-mobile@2x.webp 2x">
+                <source media="(min-width: 1200px)" srcset="img/main-bridge-desktop@1x.jpg 1x, img/main-bridge-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/main-bridge-tablet@1x.jpg 1x, img/main-bridge-tablet@2x.jpg 2x">
+                <img class="features__item-image" srcset="img/main-bridge-mobile@2x.jpg 2x" src="img/main-bridge-mobile@1x.jpg" alt="Devil's Bridge">
               </picture>
             </div>
           </li>
           <li class="features__item features__item--simple">
             <div class="features__item-wrapper">
-              <h3 class="features__item-title">Small Territory</h3>
+              <h3 class="features__item-title">Small <br>Territory</h3>
               <span class="features__item-number">— №3 —</span>
               <p class="features__item-text">All sights are located close to each other!</p>
             </div>
           </li>
           <li class="features__item features__item--simple">
             <div class="features__item-wrapper">
-              <h3 class="features__item-title">Beautiful Road</h3>
+              <h3 class="features__item-title">Beautiful <br>Road</h3>
               <span class="features__item-number">— №4 —</span>
               <p class="features__item-text">Driving from Las-Vegas to Sedona is fun!</p>
             </div>
@@ -129,8 +137,12 @@
       <sectiom class="page-main__map map">
         <h2 class="visually-hidden">Find Us on the Map</h2>
         <picture>
-          <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.jpg">
-          <img class="map__image" src="img/bg-map-mobile@1x.jpg" alt="The City of Arizona">
+          <source type="image/webp" media="(min-width: 1200px)" srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="img/bg-map-mobile@1x.webp 1x, img/bg-map-mobile@2x.webp 2x">
+          <source media="(min-width: 1200px)" srcset="img/bg-map-desktop@1x.jpg 1x, img/bg-map-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.jpg 1x, img/bg-map-tablet@2x.jpg 2x">
+          <img class="map__image" srcset="img/bg-map-mobile@2x.jpg 2x" src="img/bg-map-mobile@1x.jpg" alt="The City of Arizona">
         </picture>
       </sectiom>
     </main>

@@ -39,3 +39,15 @@
     margin-bottom: 42px;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .booking {
+    padding-left: 371px;
+    padding-right: 371px;
+    padding-bottom: 65px;
+  }
+
+  .booking__text {
+    margin-bottom: 47px;
+  }
+}
