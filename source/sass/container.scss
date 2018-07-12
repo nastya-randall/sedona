@@ -1,11 +1,12 @@
 .container {
-  width: auto;
+  width: 320px;
+  margin: 0 auto;
   box-sizing: border-box;
 }
 
 @media (min-width: $tablet-width) {
   .container {
-    width: auto;
+    width: 768px;
   }
 }
 

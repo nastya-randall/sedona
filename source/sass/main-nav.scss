@@ -23,6 +23,17 @@
   box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.2), inset 0 1px 0 0 rgba(255, 255, 255, 0.2);
 }
 
+.main-nav__item a[href] {
+  &:hover {
+    background-color: #669ec0;
+  }
+
+  &:active {
+    color: rgba(256, 256, 256, 0.3);
+    background-color: #5496bd;
+  }
+}
+
 .main-nav__item:last-child a {
   position: relative;
   padding-bottom: 7px;
@@ -152,6 +163,22 @@
     font-size: 14px;
     background-color: #ffffff;
     box-shadow: none;
+  }
+
+  .main-nav__item a[href] {
+    &:hover {
+      color: #81b3d2;
+      background-color: transparent;
+    }
+
+    &:active {
+      color: rgba(0, 0, 0, 0.3);
+      background-color: transparent;
+    }
+  }
+
+  .main-nav__item .main-nav__link--active {
+    color: #766357;
   }
 
   .main-nav__close,

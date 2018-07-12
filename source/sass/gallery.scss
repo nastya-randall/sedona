@@ -1,0 +1,142 @@
+.gallery__title {
+  margin: 0;
+  margin-bottom: 23px;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: center;
+}
+
+.gallery__text {
+  margin: 0 24px;
+  margin-bottom: 28px;
+  color: #333333;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+}
+
+.gallery__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.gallery__item {
+  padding: 20px;
+  padding-top: 22px;
+  padding-bottom: 15px;
+  border-top: 1px solid #e5e5e5;
+}
+
+.gallery__item-image {
+  display: block;
+}
+
+.gallery__item-wrapper {
+  padding-top: 14px;
+}
+
+.gallery__item-title {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 26px;
+}
+
+.gallery__item-author {
+  margin: 0;
+  margin-bottom: 5px;
+  color: #333333;
+  font-size: 14px;
+  line-height: 26px;
+  text-transform: none;
+}
+
+.gallery__likes {
+  display: flex;
+}
+
+.gallery__likes-icon {
+  margin-right: 10px;
+  fill: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.gallery__likes-number {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 26px;
+}
+
+@media (min-width: $tablet-width) {
+  .gallery__title {
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .gallery__text {
+    margin-left: 170px;
+    margin-right: 170px;
+    margin-bottom: 70px;
+  }
+
+  .gallery__list {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  .gallery__item {
+    border: none;
+    padding: 0;
+
+    &:first-child {
+      width: 100%;
+    }
+  }
+
+  .gallery__item-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 13px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #f2f2f2;
+  }
+
+  .gallery__item-author {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .gallery__text {
+    margin-left: 385px;
+    margin-right: 385px;
+  }
+
+  .gallery__list {
+    padding: 0;
+  }
+
+  .gallery__item-wrapper {
+    height: 80px;
+    margin-top: -80px;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 10;
+  }
+
+  .gallery__item-title,
+  .gallery__item-author,
+  .gallery__likes-number {
+    color: #ffffff;
+  }
+
+  .gallery__likes-icon {
+    fill: #ffffff;
+  }
+}

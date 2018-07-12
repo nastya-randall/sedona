@@ -1,19 +1,23 @@
 .button {
   padding-top: 15px;
   padding-bottom: 17px;
+  min-height: 58px;
+  box-sizing: border-box;
   display: block;
   color: #ffffff;
   font-size: 21px;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 26px;
   text-decoration: none;
+  text-transform: uppercase;
   text-align: center;
   background-color: #81b3d2;
-  
+  border: none;
+
   &:hover {
     background-color: #669ec0;
   }
-  
+
   &:active {
     color: rgba(255, 255, 255, 0.3);
     background-color: #5496bd;

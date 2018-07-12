@@ -1,0 +1,41 @@
+.mini-banner {
+  min-height: 158px;
+  margin-bottom: 40px;
+  background-image: url("../img/intro-triangle.png"), url("../img/bg-back-mobile@1x.jpg");
+  background-size: 1210px auto, auto;
+  background-position: center bottom, center bottom;
+  background-repeat: no-repeat;
+  display: flex;
+}
+
+.mini-banner__image {
+  width: 229px;
+  height: 39px;
+  margin: 0 auto;
+  margin-top: 52px;
+}
+
+@media (min-width: $tablet-width) {
+  .mini-banner {
+    min-height: 290px;
+    margin-bottom: 68px;
+    background-image: url("../img/intro-triangle.png"), url("../img/bg-back-desktop@1x.jpg");
+  }
+
+  .mini-banner__image {
+    width: 458px;
+    height: 78px;
+    margin-top: 95px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .mini-banner {
+    min-height: 301px;
+    margin-bottom: 105px;
+  }
+
+  .mini-banner__image {
+    margin-top: 102px;
+  }
+}
