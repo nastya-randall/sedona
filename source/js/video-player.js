@@ -18,7 +18,7 @@
 
     likesCol[i].addEventListener('click', function (evt) {
       console.log(evt.target);
-      var likesNumber = evt.target.querySelector('.gallery__likes-number');
+      var likesNumber = evt.target.parentNode.querySelector('.gallery__likes-number');
       console.log(likesNumber);
       likesNumber.innerHTML = 1 + parseInt(likesNumber.innerHTML, 10);
     })
