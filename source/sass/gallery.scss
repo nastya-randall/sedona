@@ -30,6 +30,12 @@
 
 .gallery__item-image {
   display: block;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.05);
+    transition-duration: 0.3s;
+  }
 }
 
 .gallery__item-wrapper {
@@ -60,6 +66,11 @@
   margin-right: 10px;
   fill: rgba(0, 0, 0, 0.3);
   cursor: pointer;
+
+  &:hover,
+  &--active {
+    fill: rgba(0, 0, 0, 0.7);
+  }
 }
 
 .gallery__likes-number {
@@ -138,5 +149,13 @@
 
   .gallery__likes-icon {
     fill: #ffffff;
+  }
+
+  .gallery__item-image {
+    &:hover {
+      transform: none;
+      filter: brightness(80%);
+
+    }
   }
 }

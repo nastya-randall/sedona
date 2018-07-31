@@ -12,7 +12,6 @@ module.exports = function(grunt) {
           src: [
             "fonts/**/*.{woff,woff2}",
             "img/**",
-            "js/**",
           ],
           dest: "docs"
         }]
@@ -100,7 +99,8 @@ module.exports = function(grunt) {
       },
       my_target: {
         files: {
-          "docs/js/script.min.js": ["docs/js/script.js"]
+          "docs/js/mobile-nav.min.js": ["source/js/mobile-nav.js"],
+          "docs/js/video-player.min.js": ["source/js/video-player.js"]
         }
       }
     },
@@ -135,7 +135,8 @@ module.exports = function(grunt) {
         bsFiles: {
           src: [
             "docs/*.html",
-            "docs/css/*.css"
+            "docs/css/*.css",
+            "docs/js/*.js"
           ]
         },
         options: {
@@ -157,6 +158,10 @@ module.exports = function(grunt) {
       style: {
         files: ["source/sass/**/*.{scss,sass}"],
         tasks: ["sass", "postcss", "csso"]
+      },
+      js: {
+        files: ["source/js/*.js"],
+        tasks: ["uglify"]
       }
     }
   });

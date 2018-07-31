@@ -8,20 +8,59 @@
     videoSlider.value = 0;
   });
 
+  var countLikes = function (node) {
+    var likesNumber = node.parentNode.querySelector('.gallery__likes-number')
+      if (node.classList.contains('gallery__likes-icon--active')) {
+        node.classList.remove('gallery__likes-icon--active');
+        likesNumber.innerHTML = parseInt(likesNumber.innerHTML, 10) - 1;
+        } else {
+          node.classList.add('gallery__likes-icon--active');
+          likesNumber.innerHTML = 1 + parseInt(likesNumber.innerHTML, 10);
+        }
+  };
 
-
-  var isLiked = false;
   var likesCol = document.querySelectorAll('.gallery__likes');
 
   for (var i = 0; i < likesCol.length; i++) {
-//    var icon = likesCol[i].querySelector('.gallery__likes-icon');
+    var icon = likesCol[i].querySelector('.gallery__likes-icon');
 
-    likesCol[i].addEventListener('click', function (evt) {
-      console.log(evt.target);
-      var likesNumber = evt.target.parentNode.querySelector('.gallery__likes-number');
-      console.log(likesNumber);
-      likesNumber.innerHTML = 1 + parseInt(likesNumber.innerHTML, 10);
-    })
+    icon.addEventListener('click', function (evt) {
+      evt.preventDefault();
+      var target = evt.target;
+
+      while (target != icon) {
+        if (target.tagName == 'svg') {
+          countLikes(target);
+          break;
+        }
+        target = target.parentNode;
+      }
+    });
   }
 
+})();
+
+(function () {
+//  var picsCol = document.querySelectorAll('.gallery__item-image');
+//  for (var i = 0; i < picsCol.length; i++) {
+//    picsCol[i].a
+//  }
+
+  var popup = document.querySelector('.popup');
+  console.log(popup);
+  var popupContainer = popup.querySelector('.popup__container');
+  var gallery = document.querySelector('.gallery__list');
+  console.log(gallery);
+  gallery.addEventListener('click', function (evt) {
+    var target = evt.target;
+    console.log(target);
+    if (target.tagName != 'IMG') {
+      return;
+    } else {
+      popup.classList.add('popup--show');
+      var photosCloned = gallery.cloneNode(true);
+      popupContainer.appendChild(photosCloned);
+
+    }
+  })
 })();

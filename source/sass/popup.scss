@@ -1,0 +1,36 @@
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 20;
+  background-color: rgba(0, 0, 0, 0.7);
+  outline: 1px solid red;
+
+  &--show {
+    display: block;
+  }
+}
+
+.popup__prev,
+.popup__next {
+  width: 20px;
+  height: 40px;
+  position: fixed;
+  top: 50%;
+  margin-top: -20px;
+  background-color: red;
+}
+
+.popup__prev {
+  left: 20px;
+}
+
+.popup__next {
+  right: 20px;
+}
+.popup__photos-hide {
+  display: none;
+}
