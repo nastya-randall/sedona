@@ -6,11 +6,13 @@
   width: 100%;
   height: 100%;
   z-index: 20;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.9);
   outline: 1px solid red;
 
   &--show {
-    display: block;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 
@@ -18,7 +20,6 @@
 .popup__next {
   width: 20px;
   height: 40px;
-  position: fixed;
   top: 50%;
   margin-top: -20px;
   background-color: red;
@@ -33,4 +34,37 @@
 }
 .popup__photos-hide {
   display: none;
+}
+
+.popup__gallery-item {
+  border: none;
+}
+
+.popup__item-wrapper {
+  height: auto;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 13px;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: rgba(255, 255, 255, 1);
+  background-color: transparent;
+}
+
+.popup__item-author {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.popup__likes-icon {
+  fill: rgba(255, 255, 255, 0.6);
+}
+
+@media (min-width: $tablet-width) {
+  .popup__item-image {
+    height: 534px;
+    width: 800px;
+    object-fit: cover;
+  }
 }

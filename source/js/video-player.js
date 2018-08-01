@@ -51,16 +51,83 @@
   var popupContainer = popup.querySelector('.popup__container');
   var gallery = document.querySelector('.gallery__list');
   console.log(gallery);
+  var next = popup.querySelector('.popup__next');
+  var prev = popup.querySelector('.popup__prev');
+  var currentIndex;
+  var currentItem;
+
+  var galleryItems = gallery.querySelectorAll('.gallery__item');
+
+  var updateItem = function (index) {
+    currentItem = galleryItems[index].cloneNode(true);
+    popupContainer.appendChild(currentItem);
+    console.log(currentItem);
+    popup.querySelector('.gallery__item').classList.add('popup__gallery-item');
+    popup.querySelector('.gallery__item-wrapper').classList.add('popup__item-wrapper');
+    popup.querySelector('.gallery__item-author').classList.add('popup__item-author');
+    popup.querySelector('.gallery__likes-icon').classList.add('popup__likes-icon');
+
+    var image = popup.querySelector('img');
+    var item = popup.querySelector('li');
+
+    var imageName = image.dataset.filename;
+    console.log(imageName);
+    if (image.currentSrc.includes('webp')) {
+      item.removeChild(item.querySelector('picture'));
+
+      var newImage = document.createElement('img');
+      newImage.src = 'img/photo-' + imageName;
+
+      if (window.matchMedia('(min-width: 1200px)').matches) {
+        if (index != 0) {
+          newImage.src = newImage.src + '-desktop@2x.webp';
+        } else {
+          newImage.src = newImage.src + '-tablet@2x.webp';
+        }
+      } else if (window.matchMedia('(min-width: 768px)').matches) {
+        newImage.src = newImage.src + '-tablet@2x.webp';
+      } else {
+        newImage.src = newImage.src + '-mobile@2x.webp';
+      }
+
+      item.insertBefore(newImage, item.firstChild);
+    }
+    image.src = image.src.replace('1x','2x');
+    newImage.classList.add('popup__item-image');
+    console.log(newImage);
+  };
+
   gallery.addEventListener('click', function (evt) {
     var target = evt.target;
-    console.log(target);
+    console.log(target.id);
     if (target.tagName != 'IMG') {
       return;
     } else {
       popup.classList.add('popup--show');
-      var photosCloned = gallery.cloneNode(true);
-      popupContainer.appendChild(photosCloned);
+      currentIndex = parseInt(target.id, 10);
 
+      updateItem(currentIndex);
     }
-  })
+
+    });
+
+
+  next.addEventListener('click', function () {
+    if (currentIndex < galleryItems.length - 1) {
+      popupContainer.innerHTML = '';
+      currentIndex = currentIndex + 1;
+      console.log(currentIndex);
+      updateItem(currentIndex);
+    }
+  });
+
+  prev.addEventListener('click', function () {
+    if (currentIndex > 0) {
+      popupContainer.innerHTML = '';
+      currentIndex = currentIndex - 1;
+      console.log(currentIndex);
+      updateItem(currentIndex);
+    }
+  });
+
 })();
