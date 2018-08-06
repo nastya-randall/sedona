@@ -51,7 +51,7 @@
 
         <section class="gallery__photos">
           <h1 class="gallery__title">Photos & Videos</h1>
-          <p class="gallery__text">Still can't make up your mind? These photos will awaken your desire to see Sedona all for yourself.</p>
+          <p class="gallery__text">Still can't make up your mind? These photos will awaken your desire to see Sedona all for yourself</p>
           <ul class="gallery__list">
             <li class="gallery__item">
               <picture>
@@ -157,9 +157,10 @@
         </section>
 
         <section class="popup">
-          <div class="popup__prev"></div>
+          <div class="popup__overlay"></div>
+          <div class="popup__nav popup__nav--prev"></div>
           <div class="popup__container"></div>
-          <div class="popup__next"></div>
+          <div class="popup__nav popup__nav--next"></div>
         </section>
 
         <section class="gallery__video video">
@@ -179,7 +180,7 @@
                 <use xlink:href="#icon-video-replay"></use>
               </svg>
               <div class="video__player-bar">
-                <input class="video__range-slider" type="range" min="0" max="100" name="video-bar" step="1">
+                <input class="video__range-slider" type="range" min="0" max="100" name="video-bar" step="1" value="10">
               </div>
               <svg class="video__button video__button--subtitles" width="32" height="20">
                 <use xlink:href="#icon-video-subtitles"></use>
@@ -197,21 +198,21 @@
       <span class="page-footer__hashtag">#visitsedona</span>
       <ul class="page-footer__social social">
         <li class="social__item">
-          <a class="social__link" href="#" titel="Follow us on Twitter">
+          <a class="social__link" href="#" title="Follow us on Twitter">
             <svg class="social__icon" width="18" height="14">
               <use xlink:href="#icon-twitter"></use>
             </svg>
           </a>
         </li>
         <li class="social__item">
-          <a class="social__link" href="#" titel="Follow us on Facebook">
+          <a class="social__link" href="#" title="Follow us on Facebook">
             <svg class="social__icon" width="9" height="18">
               <use xlink:href="#icon-facebook"></use>
             </svg>
           </a>
         </li>
         <li class="social__item">
-          <a class="social__link" href="#" titel="Follow us on Youtube">
+          <a class="social__link" href="#" title="Follow us on Youtube">
             <svg class="social__icon" width="20" height="14">
               <use xlink:href="#icon-youtube"></use>
             </svg>
@@ -223,6 +224,7 @@
 
     <script src="js/mobile-nav.min.js"></script>
     <script src="js/video-player.min.js"></script>
+    <script src="js/gallery.min.js"></script>
 
   </body>
 </html>

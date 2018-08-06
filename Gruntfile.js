@@ -87,7 +87,7 @@ module.exports = function(grunt) {
         },
         files: {
           "docs/index.html": ["docs/index.html"],
-          "docs/catalog.html": ["docs/catalog.html"],
+          "docs/gallery.html": ["docs/gallery.html"],
           "docs/form.html": ["docs/form.html"]
         }
       }
@@ -100,7 +100,8 @@ module.exports = function(grunt) {
       my_target: {
         files: {
           "docs/js/mobile-nav.min.js": ["source/js/mobile-nav.js"],
-          "docs/js/video-player.min.js": ["source/js/video-player.js"]
+          "docs/js/video-player.min.js": ["source/js/video-player.js"],
+          "docs/js/gallery.min.js": ["source/js/gallery.js"]
         }
       }
     },
