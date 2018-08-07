@@ -31,6 +31,24 @@
     next.classList.add('popup__nav--hide');
   };
 
+  var setFirstImage = function (index, img) {
+    if (index != 0) {
+          img.src = img.src + '-desktop@2x.jpg';
+        } else {
+          img.src = img.src + '-tablet@2x.jpg';
+        }
+  };
+
+  var checkViewport = function (index, img) {
+    if (window.matchMedia('(min-width: 1200px)').matches) {
+      setFirstImage(index, img);
+    } else if (window.matchMedia('(min-width: 768px)').matches) {
+      img.src = img.src + '-tablet@2x.jpg';
+    } else {
+      img.src = img.src + '-mobile@2x.jpg';
+    }
+  };
+
   var updateItem = function (index) {
     currentItem = galleryItems[index].cloneNode(true);
     popupContainer.appendChild(currentItem);
@@ -43,27 +61,12 @@
     var item = popup.querySelector('li');
 
     var imageName = image.dataset.filename;
-    if (image.currentSrc.includes('webp')) {
-      item.removeChild(item.querySelector('picture'));
+    var newImage = document.createElement('img');
+    item.removeChild(item.querySelector('picture'));
+    newImage.src = 'img/photo-' + imageName;
+    checkViewport(index, newImage);
+    item.insertBefore(newImage, item.firstChild);
 
-      var newImage = document.createElement('img');
-      newImage.src = 'img/photo-' + imageName;
-
-      if (window.matchMedia('(min-width: 1200px)').matches) {
-        if (index != 0) {
-          newImage.src = newImage.src + '-desktop@2x.webp';
-        } else {
-          newImage.src = newImage.src + '-tablet@2x.webp';
-        }
-      } else if (window.matchMedia('(min-width: 768px)').matches) {
-        newImage.src = newImage.src + '-tablet@2x.webp';
-      } else {
-        newImage.src = newImage.src + '-mobile@2x.webp';
-      }
-
-      item.insertBefore(newImage, item.firstChild);
-    }
-    image.src = image.src.replace('1x','2x');
     newImage.classList.add('popup__item-image');
     hideNav();
     showNav(index);
