@@ -1459,9 +1459,8 @@ label.visually-hidden {
   z-index: -1; }
 
 .popup__nav {
-  min-width: 30px;
+  width: 10%;
   max-width: 100px;
-  flex-growh: 1;
   height: 100%;
   max-height: 300px;
   padding: 5px;
@@ -1470,6 +1469,10 @@ label.visually-hidden {
   background-size: 35px;
   opacity: 0.5;
   cursor: pointer; }
+  .popup__nav:hover {
+    opacity: 1;
+    -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s; }
   .popup__nav--prev {
     -webkit-transform: scale(-1, 1);
             transform: scale(-1, 1); }
@@ -1479,11 +1482,6 @@ label.visually-hidden {
   .popup__nav--show {
     background-image: url("../img/arrow.png");
     cursor: pointer; }
-
-.popup__nav:hover {
-  opacity: 1;
-  -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s; }
 
 .popup__gallery-item {
   position: relative;
